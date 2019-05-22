@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<label>Choose an ice cream flavor:
+    <select id="ice-cream" name="ice-cream">
+        <option value="">Select One …</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="vanilla">Vanilla</option>
+    </select>
+</label>
+
+
+
+
+
+<script>
+cols = ['red', 'green', 'blue', 'black', 'green', 'AntiqueWhite', 'AliceBlue', 'Aqua', 'Aquamarine', 'Azure', 'BlueViolet', 'Brown'];
+
+
+document.addEventListener('DOMContentLoaded',function() {
+    document.querySelector('select[name="ice-cream"]').onchange=changeEventHandler;
+},false);
+
+var x = 0;
+function colo(){
+	var r = Math.floor((Math.random() * 12));
+	document.body.style.backgroundColor = cols[r];
+	x++;
+
+}
+
+setInterval(colo, 300);
+</script>
+
+
+</body>
+</html>
